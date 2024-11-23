@@ -1,5 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import NavBar from "./components/NavBar";
+import { Link } from "react-router-dom";
 
 function App() {
   const items: {
@@ -19,8 +20,8 @@ function App() {
     { text: "Stressed Student", color: "primary" },
   ];
 
-  const handleSelectItem = (item: { text: string; color: string }) => {
-    console.log(item);
+  const handleSelectItem = (index: number) => {
+    return <Link to="/scenarios"></Link>;
   };
 
   return (

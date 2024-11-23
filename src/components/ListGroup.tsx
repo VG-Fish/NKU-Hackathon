@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Button from "./Button";
 
 interface ListGroupProps {
@@ -15,7 +15,7 @@ interface ListGroupProps {
       | "dark";
   }[];
   heading: string;
-  onSelectedItem: (item: { text: string; color: string }) => void;
+  onSelectedItem: (index: number) => ReactNode;
 }
 
 function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
@@ -35,7 +35,7 @@ function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
             key={index}
             onClick={() => {
               setSelectedIndex(index);
-              onSelectedItem(item);
+              onSelectedItem(index);
             }}
           >
             <Button
