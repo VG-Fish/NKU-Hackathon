@@ -18,7 +18,11 @@ const Scenario = () => {
   return (
     <>
       {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>
+        <Alert
+          alertType="warning"
+          closeable={true}
+          onClose={() => setAlertVisibility(false)}
+        >
           While the following demo gives a unadvantageous situation for Google
           Gemini, we want to demonstrate one point:{" "}
           <strong>
@@ -28,7 +32,9 @@ const Scenario = () => {
           </strong>
         </Alert>
       )}
-      <p>{scenario}</p>
+      <Alert alertType="primary" closeable={false}>
+        {scenario}
+      </Alert>
     </>
   );
 };
