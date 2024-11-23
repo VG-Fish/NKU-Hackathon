@@ -1,5 +1,14 @@
+import { useLocation } from "react-router-dom";
+
 const Scenario = () => {
-  return <div>Scenario</div>;
+  const location = useLocation();
+  const data = location.state;
+
+  return (
+    <>
+      <h1>{data}</h1>
+    </>
+  );
 };
 
 export default Scenario;
