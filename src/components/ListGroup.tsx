@@ -1,19 +1,25 @@
 import { useState } from "react";
+import Button from "./Button";
 
 interface ListGroupProps {
-  items: string[][];
+  items: {
+    text: string;
+    color:
+      | "primary"
+      | "secondary"
+      | "success"
+      | "danger"
+      | "warning"
+      | "info"
+      | "light"
+      | "dark";
+  }[];
   heading: string;
-  onSelectedItem: (item: string[]) => void;
+  onSelectedItem: (item: { text: string; color: string }) => void;
 }
 
 function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
-  // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
-  // Event Handler
-  // const handleClick = (event: MouseEvent) => {
-  //   console.log(event);
-  // };
 
   return (
     <>
@@ -26,13 +32,17 @@ function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
                 ? "list-group-item active"
                 : "list-group-item"
             }
-            key={item[0]}
+            key={index}
             onClick={() => {
               setSelectedIndex(index);
               onSelectedItem(item);
             }}
           >
-            {`${item[0]}\t${item[1]}`}
+            <Button
+              text={item.text}
+              color={item.color}
+              onClick={() => {}}
+            ></Button>
           </li>
         ))}
       </ul>
