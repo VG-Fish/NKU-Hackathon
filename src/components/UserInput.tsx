@@ -1,19 +1,22 @@
 import { useState } from "react";
+import Alert from "./Alert";
 
 function UserInput() {
   const [inputValue, setInputValue] = useState("");
   const [inputVisible, setInputVisibility] = useState(true);
+  let userInput: string = "";
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
   const handleSubmit = () => {
+    userInput = inputValue;
     setInputVisibility(false);
   };
 
   return (
-    <div>
+    <>
       {inputVisible && (
         <div>
           <input
@@ -25,7 +28,12 @@ function UserInput() {
           <button onClick={handleSubmit}>Submit</button>
         </div>
       )}
-    </div>
+      {!inputVisible && (
+        <Alert alertType="secondary" closeable={false}>
+          {inputValue}
+        </Alert>
+      )}
+    </>
   );
 }
 
