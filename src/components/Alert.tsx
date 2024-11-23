@@ -21,7 +21,7 @@ const Alert = ({ children, onClose, closeable, alertType }: AlertProps) => {
       className={
         closeable
           ? `alert alert-warning alert-${alertType} fade show`
-          : `alert alert-warning`
+          : `alert alert-${alertType}`
       }
       role="alert"
     >
