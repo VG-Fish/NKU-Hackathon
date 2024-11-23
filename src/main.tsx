@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Resources from "./routes/Resources.tsx";
 import Scenario from "./routes/Scenario.tsx";
+import "bootstrap/dist/css/bootstrap.css";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
