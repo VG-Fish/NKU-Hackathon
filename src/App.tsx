@@ -1,5 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import Button from "./components/Button";
+import NavBar from "./components/NavBar";
 
 function App() {
   const items = [
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
       <ListGroup
         items={items}
         heading="Cities"
