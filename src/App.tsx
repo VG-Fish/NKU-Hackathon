@@ -1,18 +1,25 @@
 import ListGroup from "./components/ListGroup";
-import Button from "./components/Button";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const items = [
-    ["Chicago", "test"],
-    ["London", "test"],
-    ["Tokyo", "test"],
-    ["Cairo", "test"],
-    ["Sao Paulo", "test"],
-    ["Sydney", "test"],
+  const items: {
+    text: string;
+    color:
+      | "primary"
+      | "secondary"
+      | "success"
+      | "danger"
+      | "warning"
+      | "info"
+      | "light"
+      | "dark";
+  }[] = [
+    { text: "Lonely Student", color: "primary" },
+    { text: "Bullied Student", color: "primary" },
+    { text: "Stressed Student", color: "primary" },
   ];
 
-  const handleSelectItem = (item: string[]) => {
+  const handleSelectItem = (item: { text: string; color: string }) => {
     console.log(item);
   };
 
@@ -21,7 +28,7 @@ function App() {
       <NavBar />
       <ListGroup
         items={items}
-        heading="Cities"
+        heading="Scenarios"
         onSelectedItem={handleSelectItem}
       />
     </>
