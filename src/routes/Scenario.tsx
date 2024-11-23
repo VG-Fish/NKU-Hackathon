@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Alert from "../components/Alert";
+import UserInput from "../components/UserInput";
 
 const Scenario = () => {
   const [alertVisible, setAlertVisibility] = useState(true);
@@ -35,6 +36,7 @@ const Scenario = () => {
       <Alert alertType="primary" closeable={false}>
         {scenario}
       </Alert>
+      <UserInput></UserInput>
     </>
   );
 };
