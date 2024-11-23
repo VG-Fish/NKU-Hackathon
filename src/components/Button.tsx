@@ -9,14 +9,13 @@ interface ButtonProps {
     | "info"
     | "light"
     | "dark";
-  onClick: () => void;
 }
 
-const Button = ({ text, color = "primary", onClick }: ButtonProps) => {
+const Button = ({ text, color = "primary" }: ButtonProps) => {
   return (
     <>
       <hr />
-      <button type="button" className={"btn btn-" + color} onClick={onClick}>
+      <button type="button" className={"btn btn-" + color}>
         {text}
       </button>
     </>

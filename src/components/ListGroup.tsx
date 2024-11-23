@@ -1,5 +1,6 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 interface ListGroupProps {
   items: {
@@ -15,11 +16,11 @@ interface ListGroupProps {
       | "dark";
   }[];
   heading: string;
-  onSelectedItem: (index: number) => ReactNode;
 }
 
-function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
+function ListGroup({ items, heading }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -35,14 +36,10 @@ function ListGroup({ items, heading, onSelectedItem }: ListGroupProps) {
             key={index}
             onClick={() => {
               setSelectedIndex(index);
-              onSelectedItem(index);
+              navigate("scenario", { state: index });
             }}
           >
-            <Button
-              text={item.text}
-              color={item.color}
-              onClick={() => {}}
-            ></Button>
+            <Button text={item.text} color={item.color}></Button>
           </li>
         ))}
       </ul>
