@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Alert from "./Alert";
+import Alert from "../components/Alert";
 
 const Scenario = () => {
   const [alertVisible, setAlertVisibility] = useState(true);
