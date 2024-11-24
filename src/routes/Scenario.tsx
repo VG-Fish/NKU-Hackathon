@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Alert from "../components/Alert";
 import UserInput from "../components/UserInput";
 import Gemini from "../components/Gemini";
+import Button from "../components/Button";
 
 const Scenario = () => {
   const [alertVisible, setAlertVisibility] = useState(true);
@@ -32,6 +33,8 @@ const Scenario = () => {
     handleGeminiRequest(scenario);
   }, [scenario]);
 
+  const navigate = useNavigate();
+
   return (
     <div className="bg-dark text-white" style={{ minHeight: "100vh" }}>
       {alertVisible && (
@@ -57,9 +60,15 @@ const Scenario = () => {
         setInputVisibility={setInputVisibility}
       />
       {!inputVisible && (
-        <Alert alertType="info" closeable={false}>
-          {`Google Gemini Response: \n${geminiResponse}`}
-        </Alert>
+        <div>
+          <Alert alertType="info" closeable={false}>
+            {`Google Gemini Response: \n${geminiResponse}`}
+          </Alert>
+          <Button
+            text="Resources Page"
+            onClick={() => navigate("/resources")}
+          ></Button>
+        </div>
       )}
     </div>
   );
