@@ -29,7 +29,8 @@ function UserInput({ inputVisible, setInputVisibility }: UserInputProps) {
             type="text"
             value={inputValue}
             onChange={handleChange}
-            placeholder="Enter text here"
+            placeholder="Enter your suggestion here"
+            style={{ width: "85%", marginRight: "20px" }}
           />
           <button
             type="button"
@@ -42,7 +43,8 @@ function UserInput({ inputVisible, setInputVisibility }: UserInputProps) {
       )}
       {!inputVisible && (
         <Alert alertType="secondary" closeable={false}>
-          {`User: ${inputValue}`}
+          <strong>User: </strong>
+          {inputValue}
         </Alert>
       )}
     </>
