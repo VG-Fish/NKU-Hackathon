@@ -60,7 +60,7 @@ const Scenario = () => {
         setInputVisibility={setInputVisibility}
       />
       {!inputVisible && (
-        <div>
+        <div className="text-center">
           <Alert alertType="info" closeable={false}>
             <strong>Google Gemini Response: </strong>
             {geminiResponse}
@@ -73,6 +73,7 @@ const Scenario = () => {
             <Button
               text="Resources Page"
               onClick={() => navigate("/NKU-Hackathon/resources")}
+              big="false"
             ></Button>
           </Alert>
         </div>
