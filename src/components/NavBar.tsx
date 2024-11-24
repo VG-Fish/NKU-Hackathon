@@ -20,10 +20,10 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link className="navbar-brand fs-5" to="/">
+            <Link className="navbar-brand fs-5" to="/NKU-Hackathon">
               Home
             </Link>
-            <Link className="navbar-brand fs-5" to="/resources">
+            <Link className="navbar-brand fs-5" to="/NKU-Hackathon/resources">
               Resources
             </Link>
           </div>
