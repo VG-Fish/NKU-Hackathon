@@ -18,11 +18,16 @@ const Button = ({
   onClick = () => {},
 }: ButtonProps) => {
   return (
-    <>
-      <button type="button" className={"btn btn-" + color} onClick={onClick}>
+    <div className="text-center">
+      <button
+        type="button"
+        className={"btn btn-" + color}
+        style={{ height: "140px", width: "250px" }}
+        onClick={onClick}
+      >
         {text}
       </button>
-    </>
+    </div>
   );
 };
 
