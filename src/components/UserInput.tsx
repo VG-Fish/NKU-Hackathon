@@ -9,14 +9,11 @@ interface UserInputProps {
 function UserInput({ inputVisible, setInputVisibility }: UserInputProps) {
   const [inputValue, setInputValue] = useState("");
 
-  let userInput: string = "";
-
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
   const handleSubmit = () => {
-    userInput = inputValue;
     setInputVisibility(false);
   };
 
