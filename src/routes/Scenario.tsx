@@ -72,7 +72,7 @@ const Scenario = () => {
             </span>
             <Button
               text="Resources Page"
-              onClick={() => navigate("/resources")}
+              onClick={() => navigate("/NKU-Hackathon/resources")}
             ></Button>
           </Alert>
         </div>
