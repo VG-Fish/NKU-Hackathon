@@ -1,3 +1,4 @@
+import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 import NavBar from "./components/NavBar";
 
@@ -20,10 +21,15 @@ function App() {
   ];
 
   return (
-    <div className="bg-dark text-white">
+    <>
       <NavBar />
-      <ListGroup items={items} heading="Scenarios" />
-    </div>
+      <div>
+        <ListGroup
+          items={items}
+          heading="Choose one of the following Scenarios:"
+        />
+      </div>
+    </>
   );
 }
 

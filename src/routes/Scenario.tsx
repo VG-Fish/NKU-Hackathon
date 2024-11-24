@@ -45,7 +45,7 @@ const Scenario = () => {
         >
           While the following demo gives a unadvantageous situation for Google
           Gemini, we want to demonstrate one point:{" "}
-          <strong>
+          <strong style={{ marginRight: "5px" }}>
             No matter the situation, just like a real mental health
             professional, LLMs should always output helpful advice. As it
             stands, current LLMs <em>do not</em> meet this requirement.
@@ -62,12 +62,19 @@ const Scenario = () => {
       {!inputVisible && (
         <div>
           <Alert alertType="info" closeable={false}>
-            {`Google Gemini Response: \n${geminiResponse}`}
+            <strong>Google Gemini Response: </strong>
+            {geminiResponse}
           </Alert>
-          <Button
-            text="Resources Page"
-            onClick={() => navigate("/resources")}
-          ></Button>
+          <Alert alertType="success" closeable={false}>
+            <span style={{ marginRight: "20px" }}>
+              Now that you've read the Google Gemini response, how about
+              clicking the Resources Page button and seek professional help?
+            </span>
+            <Button
+              text="Resources Page"
+              onClick={() => navigate("/resources")}
+            ></Button>
+          </Alert>
         </div>
       )}
     </div>
