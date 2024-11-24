@@ -41,7 +41,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
                 navigate("scenario", { state: index });
               }}
             >
-              <Button text={item.text} color={item.color}></Button>
+              <Button text={item.text} color={item.color} big="true"></Button>
             </li>
           ))}
         </ul>
