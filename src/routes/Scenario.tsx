@@ -60,7 +60,7 @@ const Scenario = () => {
         setInputVisibility={setInputVisibility}
       />
       {!inputVisible && (
-        <div>
+        <div className="text-center">
           <Alert alertType="info" closeable={false}>
             {`Google Gemini Response: \n${geminiResponse}`}
           </Alert>
