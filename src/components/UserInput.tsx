@@ -23,14 +23,20 @@ function UserInput({ inputVisible, setInputVisibility }: UserInputProps) {
   return (
     <>
       {inputVisible && (
-        <div>
+        <div className="bg-dark text-white text-center">
           <input
             type="text"
             value={inputValue}
             onChange={handleChange}
             placeholder="Enter text here"
           />
-          <button onClick={handleSubmit}>Submit</button>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
         </div>
       )}
       {!inputVisible && (

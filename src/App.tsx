@@ -20,10 +20,10 @@ function App() {
   ];
 
   return (
-    <>
+    <div className="bg-dark text-white">
       <NavBar />
       <ListGroup items={items} heading="Scenarios" />
-    </>
+    </div>
   );
 }
 

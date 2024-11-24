@@ -33,7 +33,7 @@ const Scenario = () => {
   }, [scenario]);
 
   return (
-    <>
+    <div className="bg-dark text-white" style={{ minHeight: "100vh" }}>
       {alertVisible && (
         <Alert
           alertType="warning"
