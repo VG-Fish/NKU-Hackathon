@@ -25,7 +25,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
   return (
     <>
       <div className="bg-dark text-white">
-        <h1 className="text-center mt-2">{heading}</h1>
+        <h1 className="text-center">{heading}</h1>
         <ul className="list-group bg-dark text-white list-group-flush">
           {items.map((item, index) => (
             <li
@@ -41,7 +41,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
                 navigate("scenario", { state: index });
               }}
             >
-              <Button text={item.text} color={item.color}></Button>
+              <Button text={item.text} color={item.color} big="true"></Button>
             </li>
           ))}
         </ul>

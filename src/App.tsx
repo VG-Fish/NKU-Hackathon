@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="bg-dark" style={{ minHeight: "100vh" }}>
         <ListGroup
           items={items}
           heading="Choose one of the following Scenarios:"
