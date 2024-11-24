@@ -19,7 +19,6 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <>
-      <hr />
       <button type="button" className={"btn btn-" + color} onClick={onClick}>
         {text}
       </button>
