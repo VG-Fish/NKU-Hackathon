@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
+import logo from "/logo-transparent.png";
 
 const NavBar = () => {
   return (
-    <nav className="navbar bg-primary">
+    <nav className="navbar" style={{ backgroundColor: "#1d2d44" }}>
       <div className="container-fluid">
         <a className="navbar-brand fs-3" href="#">
-          <b>dAInger</b>
+          <img
+            src={logo}
+            style={{
+              height: "50px",
+              width: "50px",
+              backgroundColor: "transparent",
+            }}
+          />
         </a>
         <button
           className="navbar-toggler"
