@@ -16,43 +16,15 @@ const Resources = () => {
   return (
     <div className="bg-dark text-white" style={{ minHeight: "100vh" }}>
       <NavBar />
-      <h1 className="text-white ">Resources</h1>
-      <ul className="list-group bg-dark text-white border-dark">
-        <li className="list-group-item bg-dark">
-          <a href={resources[0][1]} target="_blank">
-            {resources[0][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[1][1]} target="_blank">
-            {resources[1][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[2][1]} target="_blank">
-            {resources[2][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[3][1]} target="_blank">
-            {resources[3][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[4][1]} target="_blank">
-            {resources[4][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[5][1]} target="_blank">
-            {resources[5][0]}
-          </a>
-        </li>
-        <li className="list-group-item bg-dark">
-          <a href={resources[6][1]} target="_blank">
-            {resources[6][0]}
-          </a>
-        </li>
+      <h1 className="text-white text-center mt-2">Resources</h1>
+      <ul className="list-group bg-dark text-white border-dark list-group-flush">
+        {resources.map((resource) => (
+          <li className="list-group-item bg-dark" style={{ border: "none" }}>
+            <a href={resource[1]} target="_blank">
+              {resource[0]}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

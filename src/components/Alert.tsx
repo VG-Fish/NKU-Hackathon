@@ -20,8 +20,8 @@ const Alert = ({ children, onClose, closeable, alertType }: AlertProps) => {
     <div
       className={
         closeable
-          ? `alert alert-warning alert-${alertType} fade show`
-          : `alert alert-${alertType}`
+          ? `alert alert-warning alert-${alertType} fade show text-center`
+          : `alert alert-${alertType} text-center`
       }
       role="alert"
     >

@@ -17,7 +17,7 @@ const Scenario = () => {
   const scenario = `${descriptions[index]} One day, you decide to help out your friend by offering some advice. What will you tell them?`;
 
   return (
-    <>
+    <div className="bg-dark text-white" style={{ minHeight: "100vh" }}>
       {alertVisible && (
         <Alert
           alertType="warning"
@@ -37,7 +37,7 @@ const Scenario = () => {
         {scenario}
       </Alert>
       <UserInput></UserInput>
-    </>
+    </div>
   );
 };
 
