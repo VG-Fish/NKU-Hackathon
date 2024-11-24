@@ -20,6 +20,7 @@ function UserInput() {
       {inputVisible && (
         <div className="bg-dark text-white text-center">
           <input
+            className="rounded-1 border"
             type="text"
             value={inputValue}
             onChange={handleChange}
