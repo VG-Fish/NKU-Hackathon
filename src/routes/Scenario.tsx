@@ -61,7 +61,7 @@ const Scenario = () => {
           {`Google Gemini Response: \n${geminiResponse}`}
         </Alert>
       )}
-    </>
+    </div>
   );
 };
 
