@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 import Alert from "./Alert";
 
-function UserInput() {
+interface UserInputProps {
+  inputVisible: boolean;
+  setInputVisibility: Dispatch<SetStateAction<boolean>>;
+}
+
+function UserInput({ inputVisible, setInputVisibility }: UserInputProps) {
   const [inputValue, setInputValue] = useState("");
-  const [inputVisible, setInputVisibility] = useState(true);
+
   let userInput: string = "";
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
@@ -36,7 +41,7 @@ function UserInput() {
       )}
       {!inputVisible && (
         <Alert alertType="secondary" closeable={false}>
-          {inputValue}
+          {`User: ${inputValue}`}
         </Alert>
       )}
     </>
