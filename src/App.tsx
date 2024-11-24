@@ -1,4 +1,3 @@
-import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 import NavBar from "./components/NavBar";
 
