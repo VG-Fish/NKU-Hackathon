@@ -17,6 +17,7 @@ const NavBar = () => {
         </a>
         <button
           className="navbar-toggler"
+          style={{ backgroundColor: "white" }}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
