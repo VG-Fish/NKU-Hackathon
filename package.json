@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/VG-Fish/NKU-Hackathon.git"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
